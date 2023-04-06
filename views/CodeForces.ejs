@@ -1,0 +1,16 @@
+<%- include("header")-%>
+
+<body>
+    <h1>welcome</h1>
+    <a href="http://localhost:5000/contest">contest</a>
+    <h2>Upcoming contests</h2>
+    <ul>
+       <% for(var i=0;i<arr.length;i++){ %>
+          <% if(arr[i].site=='CodeForces'){  %>
+            <li><%=arr[i].name %> || &nbsp &nbsp START:<%=arr[i].start_time %>|| &nbsp &nbsp END:<%=arr[i].end_time %> || &nbsp &nbsp Duration:<%=arr[i].duration %> || 
+                &nbsp &nbsp LINK:<a href=<%=arr[i].url%>><%=arr[i].site %></a>      ||  &nbsp &nbsp    STATUS :<%=arr[i].status%> </li>
+            <% } %>
+            <% } %>
+    </ul>
+</body>
+</html>
