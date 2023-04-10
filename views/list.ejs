@@ -11,17 +11,52 @@
                <ul> <a href="http://localhost:5000/contest/CodeChef">CodeChef</a></ul> 
     
     
-
-    <table class="table table-striped">
+               <table class="table table-striped table-responsive table-hover">
+                <thead>
+                 <h1>IN 24 Hours</h1>
+                    <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Start Time</th>
+                        <th scope="col">End Time</th>
+                        <th scope="col">Duration</th>
+                        <th scope="col">Link</th>
+                        <th scope="col">STATUS</th>
+                      </tr>
+                </thead>
+                <tr> 
+                    <%var k=0%>
+                    <% for(var i=0;i<arr.length;i++){ %>
+                        <% if((arr[i].site=='CodeForces' || arr[i].site=='CodeChef' || arr[i].site=='LeetCode' || arr[i].site=='AtCoder') && (arr[i].in_24_hours=='Yes')){  %>
+                      <% k++ %>
+                    <th scope="row"><%=k%></th>
+                    <td><%=arr[i].name %></td>
+                    <td><%=arr[i].start_time %></td>
+                    <td><%=arr[i].end_time %></td>
+                    <td><%=arr[i].duration%></td>
+                    <td><a href=<%=arr[i].url%>><%=arr[i].site %></a></td>
+                    <td><%=arr[i].status%></td>
+                </tr>
+                    <% } %>
+                    <% } %>
+                  
+        
+                </tbody>
+            </table>
+           
+            <h2>Upcoming</h2>
+    <table class="table table-striped table-responsive table-hover">
         <thead>
-          <tr>
-            <th scope="col">name</th>
-            <th scope="col">start</th>
-            <th scope="col">end</th>
-            <th scope="col">duration</th>
-            <th scope="col">link</th>
-            <th scope="col">status</th>
-          </tr>
+       
+            <tr>
+                <th scope="col">No.</th>
+                <th scope="col">Name</th>
+                <th scope="col">Start Time</th>
+                <th scope="col">End Time</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Link</th>
+                <th scope="col">STATUS</th>
+              </tr>
         </thead>
         <tr> 
             <%var k=0%>
