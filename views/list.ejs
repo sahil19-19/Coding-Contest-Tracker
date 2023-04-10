@@ -2,14 +2,10 @@
 <%- include("header")-%>
 
 <body>
-    <h1>welcome</h1>
+   
     
-    <li> 
-        <ul><a href="http://localhost:5000/contest/Leetcode">Leetcode</a></ul>
-        <ul><a href="http://localhost:5000/contest/AtCoder">AtCoder</a></ul> 
-          <ul>  <a href="http://localhost:5000/contest/CodeForces">CodeForces</a></ul> 
-               <ul> <a href="http://localhost:5000/contest/CodeChef">CodeChef</a></ul> 
     
+        
     
                <table class="table table-striped table-responsive table-hover">
                 <thead>
@@ -28,7 +24,7 @@
                 <tr> 
                     <%var k=0%>
                     <% for(var i=0;i<arr.length;i++){ %>
-                        <% if((arr[i].site=='CodeForces' || arr[i].site=='CodeChef' || arr[i].site=='LeetCode' || arr[i].site=='AtCoder') && (arr[i].in_24_hours=='Yes')){  %>
+                        <% if((arr[i].site=='CodeForces' || arr[i].site=='CodeChef' || arr[i].site=='LeetCode' || arr[i].site=='AtCoder' ||arr[i].site=='HackerRank' ||arr[i].site=='TopCoder') && (arr[i].in_24_hours=='Yes')){  %>
                       <% k++ %>
                     <th scope="row"><%=k%></th>
                     <td><%=arr[i].name %></td>
@@ -64,7 +60,7 @@
         <tr> 
             <%var k=0%>
             <% for(var i=0;i<arr.length;i++){ %>
-                <% if((arr[i].site=='CodeForces' || arr[i].site=='CodeChef' || arr[i].site=='LeetCode' || arr[i].site=='AtCoder')&&(arr[i].in_24_hours=="No")){  %>
+                <% if((arr[i].site=='CodeForces' || arr[i].site=='CodeChef' || arr[i].site=='LeetCode' || arr[i].site=='AtCoder' ||arr[i].site=='HackerRank'|| arr[i].site=='HackerEarth')&&(arr[i].in_24_hours=="No")){  %>
               <% k++ %>
             <th scope="row"><%=k%></th>
             <td><%=arr[i].name %></td>
