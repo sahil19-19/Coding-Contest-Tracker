@@ -1,4 +1,4 @@
-![image](https://github.com/sahil19-19/Coding-Contest-Tracker/assets/79751075/c49ea355-782f-4c5f-902e-85505c5fbe13)# Coding-Contest-Tracker
+# Coding-Contest-Tracker
 This site lets you track upcoming and ongoing contest on various coding sites.
 On can also see the contests that will be held in the next 24 hours. The supported website are Codeforces, CodeChef, AtCoder, HackerEarth, HackerRank, and LeetCode.
 
