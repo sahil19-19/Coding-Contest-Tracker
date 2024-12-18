@@ -19,15 +19,14 @@
         <tr> 
             <%var k=0%>
             <% for(var i=0;i<arr.length;i++){ %>
-                <% if(arr[i].site=='LeetCode'){  %>
+                <% if(arr[i].site=='leetcode.com'){  %>
               <% k++ %>
             <th scope="row"><%=k%></th>
-            <td><%=arr[i].name %></td>
-            <td><%=arr[i].start_time %></td>
-            <td><%=arr[i].end_time %></td>
+            <td><%=arr[i].event %></td>
+            <td><%=arr[i].start %></td>
+            <td><%=arr[i].end %></td>
             <td><%=arr[i].duration%></td>
-            <td><a href=<%=arr[i].url%>><%=arr[i].site %></a></td>
-            <td><%=arr[i].status%></td>
+            <td><a href=<%=arr[i].href%>><%=arr[i].host %></a></td>
         </tr>
             <% } %>
             <% } %>
