@@ -16,15 +16,17 @@ const apikey='username=rumaan&api_key=dc9ed8b489c640d09ed44b3858901dc0326b0ee1';
 // const api_url='https://kontests.net/api/v1/all'
 const api_url=`https://clist.by/api/v4/contest//?${apikey}&upcoming=true&format_time=true`;
 
+// console.log('hwllo');
 fetch(api_url).then((response)=>response.json()).then((body)=>{
     data=body;
-    //console.log(data)
+    // console.log(data)
     let arr;
     try {
     arr  = JSON.parse(data)
    } catch(e) {
      arr = data
    }
+   console.log(arr);
 // for(var i=0;i<arr.length;i++){
 //     console.log(arr[i].name)
 // }
@@ -34,13 +36,13 @@ fetch(api_url).then((response)=>response.json()).then((body)=>{
 
 
     app.get("/",(req,res)=>{
-        res.render("list",{arr:arr});
+        res.render("list",{arr:arr.objects});
         
     })
     
     app.get("/contest/:name",(req,res)=>{
         
-        res.render(req.params.name,{arr:arr});
+        res.render(req.params.name,{arr:arr.objects});
     })
 
 
