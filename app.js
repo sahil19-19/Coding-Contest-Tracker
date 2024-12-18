@@ -12,10 +12,11 @@ app.listen(5000,()=>{
 var data;
 
 'https://clist.by/api/v2/contest//?username=rumaan&api_key=dc9ed8b489c640d09ed44b3858901dc0326b0ee1';
-const apikey='/?username=rumaan&api_key=dc9ed8b489c640d09ed44b3858901dc0326b0ee1';
-const api_url='https://kontests.net/api/v1/all'
+const apikey='username=rumaan&api_key=dc9ed8b489c640d09ed44b3858901dc0326b0ee1';
+// const api_url='https://kontests.net/api/v1/all'
+const api_url=`https://clist.by/api/v4/contest//?${apikey}&upcoming=true&format_time=true`;
+
 fetch(api_url).then((response)=>response.json()).then((body)=>{
-    
     data=body;
     //console.log(data)
     let arr;
