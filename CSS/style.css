@@ -1,0 +1,13 @@
+#footer{
+    position: fixed;
+    height: 500px;
+    color: red;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+
+body {
+    margin-bottom:50px;
+}

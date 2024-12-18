@@ -27,13 +27,6 @@ fetch(api_url).then((response)=>response.json()).then((body)=>{
      arr = data
    }
    console.log(arr);
-// for(var i=0;i<arr.length;i++){
-//     console.log(arr[i].name)
-// }
-
-   //var a=JSON.stringify(data)
-   //console.log(a);
-
 
     app.get("/",(req,res)=>{
         res.render("list",{arr:arr.objects});
