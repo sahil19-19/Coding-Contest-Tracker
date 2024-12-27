@@ -2,7 +2,6 @@
 <%- include("header")-%>
 
 <body>
-
                 <%var k=0%>
                     <% for(var i=0;i<arr.length;i++){ %>
                         <% if((arr[i].site=='CodeForces' || arr[i].site=='CodeChef' || arr[i].site=='LeetCode' || arr[i].site=='AtCoder' ||arr[i].site=='HackerRank' ||arr[i].site=='TopCoder') && (arr[i].in_24_hours=='Yes')){  %>
@@ -53,7 +52,26 @@
 
         </tbody>
     </table>
-      
+
+    <!-- <script>
+        let arr = '<%= arr %>';
+        document.querySelector('#constestInputButton').addEventListener(
+            'click', ()=>{
+                // alert('hello');
+                const site = document.querySelector('#constestInput');
+                // const siteName = site.textContent.toLocaleLowerCase();
+                // console.log(site.value.toLowerCase());
+                const siteName = site.value.toLowerCase();
+                alert(arr);
+                let temp = arr.filter(helper);
+                function helper(val){
+                    siteName =  siteName + ".com";
+                    return val.site == siteName;
+                }
+                alert(temp);
+            }
+        )
+    </script>   -->
 </body>
 
 </html>
