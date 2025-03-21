@@ -1,5 +1,6 @@
 const { response } = require("express");
 const express = require("express");
+require("dotenv").config()
 const fetch = require("node-fetch");
 const app = express();
 var bodyParser = require('body-parser');
@@ -10,16 +11,15 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 app.set("view engine", "ejs");
 // import fetch from 'node-fetch';
 app.listen(5000, () => {
-    console.log("listening");
+    console.log(`listening on port : http://localhost:${5000}`);
 });
 
 var data;
 
 ("https://clist.by/api/v2/contest//?username=rumaan&api_key=dc9ed8b489c640d09ed44b3858901dc0326b0ee1");
-const apikey =
-    "username=rumaan&api_key=dc9ed8b489c640d09ed44b3858901dc0326b0ee1";
+const API_KEY = process.env.API_KEY
 // const api_url='https://kontests.net/api/v1/all'
-const api_url = `https://clist.by/api/v4/contest//?${apikey}&upcoming=true&format_time=true`;
+const api_url = `https://clist.by/api/v4/contest//?${API_KEY}&upcoming=true&format_time=true`;
 
 fetch(api_url)
     .then((response) => response.json())

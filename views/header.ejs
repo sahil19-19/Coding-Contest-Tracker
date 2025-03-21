@@ -117,10 +117,7 @@
 
             <!-- <h3>Contests</h3> -->
 
-            <div
-                class="topbar"
-                style="padding-bottom: 1rem; padding-left: 7rem"
-            >
+            <div class="topbar" style="padding-bottom: 1rem">
                 <nav class="navbar navbar-expand-md bg-body-tertiary">
                     <div class="container-fluid">
                         <a
@@ -132,7 +129,7 @@
                             class="navbar-toggler"
                             type="button"
                             data-bs-toggle="collapse"
-                            data-bs-target="#navbarNavDropdown"
+                            data-bs-target="#constestBarNavDropdown"
                             aria-controls="navbarNavDropdown"
                             aria-expanded="false"
                             aria-label="Toggle navigation"
@@ -141,15 +138,19 @@
                         </button>
                         <div
                             class="collapse navbar-collapse"
-                            id="navbarNavDropdown"
+                            id="constestBarNavDropdown"
                         >
-                            <ul class="navbar-nav">
+                            <ul
+                                class="navbar-nav"
+                                style="width: 95%; margin: auto"
+                            >
                                 <li class="nav-item">
                                     <a
                                         class="btn btn-outline-dark"
                                         style="
+                                            margin-top: 3px;
+                                            width: 125px;
                                             margin-left: 1rem;
-                                            margin-top: 1px;
                                         "
                                         aria-current="page"
                                         href="https://coding-contest-tracker.onrender.com/contest/CodeForces"
@@ -161,7 +162,8 @@
                                         class="btn btn-outline-dark"
                                         style="
                                             margin-left: 1rem;
-                                            margin-top: 1px;
+                                            margin-top: 3px;
+                                            width: 125px;
                                         "
                                         href="https://coding-contest-tracker.onrender.com/contest/CodeChef"
                                         >CodeChef</a
@@ -172,7 +174,8 @@
                                         class="btn btn-outline-dark"
                                         style="
                                             margin-left: 1rem;
-                                            margin-top: 1px;
+                                            margin-top: 3px;
+                                            width: 125px;
                                         "
                                         href="https://coding-contest-tracker.onrender.com/contest/AtCoder"
                                         >AtCoder</a
@@ -183,7 +186,8 @@
                                         class="btn btn-outline-dark"
                                         style="
                                             margin-left: 1rem;
-                                            margin-top: 1px;
+                                            margin-top: 3px;
+                                            width: 125px;
                                         "
                                         href="https://coding-contest-tracker.onrender.com/contest/LeetCode"
                                         >LeetCode</a
@@ -194,7 +198,8 @@
                                         class="btn btn-outline-dark"
                                         style="
                                             margin-left: 1rem;
-                                            margin-top: 1px;
+                                            margin-top: 3px;
+                                            width: 125px;
                                         "
                                         href="https://coding-contest-tracker.onrender.com/contest/HackerEarth"
                                         >HackerEarth</a
@@ -205,18 +210,29 @@
                                         class="btn btn-outline-dark"
                                         style="
                                             margin-left: 1rem;
-                                            margin-top: 1px;
+                                            margin-top: 3px;
+                                            width: 125px;
                                         "
                                         href="https://coding-contest-tracker.onrender.com/contest/HackerRank"
                                         >HackerRank</a
                                     >
                                 </li>
-                                <li class="nav-item">
-                                    <form class="d-flex" action="/search" method="post">
+                                <li
+                                    class="nav-item"
+                                    style="
+                                        float: right;
+                                        margin-top: 3px;
+                                        margin-left: inherit;
+                                    "
+                                >
+                                    <form
+                                        class="d-flex"
+                                        action="/search"
+                                        method="post"
+                                    >
                                         <input
                                             id="contest_search"
                                             class="form-control me-2"
-                                            style="margin-left: 10rem"
                                             type="text"
                                             placeholder="Search"
                                             name="contest_name"
@@ -237,5 +253,4 @@
             </div>
         </li>
     </head>
-
 </html>

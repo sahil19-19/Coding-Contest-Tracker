@@ -11,7 +11,6 @@
         <th scope="col">Start Time</th>
         <th scope="col">End Time</th>
         <th scope="col">Duration</th>
-        <th scope="col">Link</th>
       </tr>
     </thead>
     <tr> 
@@ -20,12 +19,10 @@
             <% if(arr[i].host=='hackerrank.com'){  %>
           <% k++ %>
         <th scope="row"><%=k%></th>
-        <th scope="row"><%=k%></th>
-        <td><%=arr[i].event %></td>
+        <td><a href=<%=arr[i].href%>><%=arr[i].event %></a></td>
         <td><%=arr[i].start %></td>
         <td><%=arr[i].end %></td>
         <td><%=arr[i].duration%></td>
-        <td><a href=<%=arr[i].href%>><%=arr[i].host %></a></td>
     </tr>
         <% } %>
         <% } %>

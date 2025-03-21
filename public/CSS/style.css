@@ -8,6 +8,15 @@
     margin-bottom: 0px;
 }
 
+.selected_button{
+    color: white;
+    background-color: black;
+}
+
 body {
-    margin-bottom:50px;
+    /* margin-bottom:50px; */
+}
+
+.btn{
+    width: 200px;
 }
